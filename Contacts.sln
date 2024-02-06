@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Uwp", "Contacts.Uwp\Contacts.Uwp.csproj", "{7728DCD5-4D15-4067-A9E8-258F5C88C056}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F836D135-E430-4092-A142-3821A963FB90} = {F836D135-E430-4092-A142-3821A963FB90}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Core", "Contacts.Core\Contacts.Core.csproj", "{F836D135-E430-4092-A142-3821A963FB90}"
 EndProject

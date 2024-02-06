@@ -19,6 +19,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <muxc:PersonPicture x:Name="m_TemplateContactPicture" />
+                <StackPanel x:Name="m_TemplateContactDetails"/>
             </Grid>
         </DataTemplate>
     </Page.Resources>

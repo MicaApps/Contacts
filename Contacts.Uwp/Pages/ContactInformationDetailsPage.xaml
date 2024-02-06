@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="Contacts.Uwp.Pages.ContactInformationDetailsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Contacts.Uwp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:models="using:Contacts.Core.Models"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <DataTemplate x:Key="ContactEmailEntryDataTemplate" x:DataType="models:Phone">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="m_TemplatePhoneNumTextBlock"
+                           Text="{Binding Number}"/>
+                <TextBlock x:Name="m_TemplatePhoneTypeTextBlock"
+                           Text="{Binding Type}"/>
+
+                <Grid.ContextFlyout>
+                    <muxc:CommandBarFlyout>
+                        <AppBarButton Icon="Send" ToolTipService.ToolTip="Send an email"/>
+                        <AppBarButton Icon="Edit" ToolTipService.ToolTip="Edit"/>
+                        <AppBarButton Icon="Share" ToolTipService.ToolTip="Share"/>
+                    </muxc:CommandBarFlyout>
+                </Grid.ContextFlyout>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <ScrollViewer x:Name="m_RootViewer"
+                  Padding="40"
+                  MaxWidth="600">
+        <StackPanel x:Name="m_RootStackPanel">
+            <Grid x:Name="m_BriefGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <muxc:PersonPicture x:Name="m_PersonPicture"
+                                    Grid.Column="0"/>
+                <TextBlock x:Name="m_PersonName"
+                           Grid.Column="1"
+                           Margin="20,0"
+                           FontSize="24"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Text="{x:Bind m_ViewModel.FullName, FallbackValue='Unknown contact'}"/>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+
+</Page>
