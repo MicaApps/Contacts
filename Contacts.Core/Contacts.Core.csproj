@@ -128,6 +128,7 @@
     <Compile Include="Models\Phone.cs" />
     <Compile Include="Models\WebAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\OutlookService.cs" />
     <EmbeddedResource Include="Properties\Contacts.Core.rd.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -142,9 +143,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Interface\" />
     <Folder Include="Models\iCloud\" />
     <Folder Include="Models\Outlook\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
