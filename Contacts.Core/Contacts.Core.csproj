@@ -120,7 +120,6 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Business.cs" />
     <Compile Include="Models\ContactTypeModel.cs" />
@@ -143,6 +142,8 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Models\iCloud\" />
+    <Folder Include="Models\Outlook\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
