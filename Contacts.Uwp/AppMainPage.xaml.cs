@@ -27,7 +27,6 @@ namespace Contacts.Uwp
         public AppMainPage()
         {
             this.InitializeComponent();
-
         }
     }
 }

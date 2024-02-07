@@ -1,4 +1,4 @@
-﻿<Page
+<Page
     x:Class="Contacts.Uwp.AppMainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -127,8 +127,6 @@
                 <AppBarButton x:Name="m_SettingsPageButton" Width="40" Label="Settings" Icon="Setting"/>
                 <AppBarButton x:Name="m_ListViewAddButton" Width="40" Label="Add Contact" Icon="Add"/>
             </CommandBar.PrimaryCommands>
-        </CommandBar>
-
 
         <Border Grid.Column="1"
                 Grid.RowSpan="4"

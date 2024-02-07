@@ -33,6 +33,8 @@ namespace Contacts.Uwp
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            
         }
 
         /// <summary>
