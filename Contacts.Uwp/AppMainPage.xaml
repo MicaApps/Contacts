@@ -6,11 +6,17 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:common="using:Contacts.Uwp.Common"
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     mc:Ignorable="d"
     d:Width="640"
-    d:Height="480"
-    Background="{ThemeResource SystemControlChromeMediumAcrylicWindowMediumBrush}">
+    d:Height="480">
+    <Page.Background>
+        <common:HostBackdropAcrylicBrush 
+            FallbackColor="#ECECF2"
+            LuminosityColor="#ECECF2"
+            Opacity="0.7"/>
+    </Page.Background>
     <Page.Resources>
         <DataTemplate x:Key="AppListViewContactTemplate">
             <Grid x:Name="m_TemplateRootGrid">
@@ -26,7 +32,7 @@
 
     <Grid x:Name="m_RootGrid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="32"/>
             <RowDefinition Height="36"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
@@ -47,6 +53,15 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
+        <StackPanel x:Name="m_AppTitleContainerPanel"
+                    Grid.Row="0"
+                    Orientation="Horizontal">
+            <Image Source="Assets/Square44x44Logo.targetsize-24_altform-unplated.png"
+                   Width="16"
+                   Margin="8 0 6 0"/>
+            <TextBlock Text="Contact"
+                       VerticalAlignment="Center"/>
+        </StackPanel>
         <Grid x:Name="m_ContactOperationTopPanel"
               Grid.Row="1"
               Margin="8,0"
@@ -84,7 +99,9 @@
                           Grid.Column="2"
                           Width="32"
                           Height="32"
-                          Padding="0">
+                          Padding="0"
+                          Background="Transparent"
+                          BorderBrush="Transparent">
                 <Viewbox Width="12"
                          Height="12">
                     <SymbolIcon Symbol="Filter"/>
@@ -102,37 +119,24 @@
             </ListView.ItemsPanel>
         </ListView>
 
-        <StackPanel x:Name="m_ContactOperationsBottomPanel"
+        <CommandBar x:Name="m_ContactOperationBottomPanel"
                     Grid.Row="3"
-                    Orientation="Horizontal"
-                    Padding="8"
-                    Spacing="4">
-            <Button x:Name="m_SettingsPageButton"
-                    Width="32"
-                    Height="32"
-                    Padding="0"
-                    Background="Transparent"
-                    BorderThickness="0">
-                <Viewbox Width="12"
-                         Height="12">
-                    <SymbolIcon Symbol="Setting"/>
-                </Viewbox>
-            </Button>
-            <Button x:Name="m_ListViewAddButton"
-                    Width="32"
-                    Height="32"
-                    Padding="0"
-                    Background="Transparent"
-                    BorderThickness="0">
-                <Viewbox Width="12"
-                         Height="12">
-                    <SymbolIcon Symbol="Add"/>
-                </Viewbox>
-            </Button>
-        </StackPanel>
+                    DefaultLabelPosition="Collapsed"
+                    HorizontalAlignment="Left">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:Name="m_SettingsPageButton" Width="40" Label="Settings" Icon="Setting"/>
+                <AppBarButton x:Name="m_ListViewAddButton" Width="40" Label="Add Contact" Icon="Add"/>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
 
+
+        <Border Grid.Column="1"
+                Grid.RowSpan="4"
+                Background="#40000000"
+                Width="0.5"
+                HorizontalAlignment="Left"/>
         <Grid Grid.Column="1"
               Grid.RowSpan="4"
-              Background="{ThemeResource SystemControlAcrylicWindowBrush}"/>
+              Background="#80FFFFFF"/>
     </Grid>
 </Page>

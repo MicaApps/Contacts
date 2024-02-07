@@ -20,6 +20,8 @@ namespace Contacts.Uwp.ViewModels
         public List<EmailAddress> Emails { get => m_TypeModel.emails; } 
         public List<Phone> Phones { get => m_TypeModel.phones; }
 
-        public ContactViewModel() { }
+        public ContactViewModel(ContactTypeModel model) {
+            this.m_TypeModel = model;
+        }
     }
 }
