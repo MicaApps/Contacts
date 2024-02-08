@@ -7,7 +7,8 @@
     <Application.Resources>
         <muxc:XamlControlsResources>
             <muxc:XamlControlsResources.MergedDictionaries>
-                <!-- Other app resources here -->
+                <ResourceDictionary Source="ms-appx:///Styles/Themes/Light.xaml"/>
+                <ResourceDictionary Source="ms-appx:///Styles/Themes/Dark.xaml"/>
             </muxc:XamlControlsResources.MergedDictionaries>
         </muxc:XamlControlsResources>
     </Application.Resources>

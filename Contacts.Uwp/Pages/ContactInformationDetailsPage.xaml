@@ -6,9 +6,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:toolkit="using:Microsoft.Toolkit.Uwp.UI.Controls"
     xmlns:models="using:Contacts.Core.Models"
     mc:Ignorable="d">
     <Page.Resources>
+        <DataTemplate x:Key="ContactTypeModelEntryHeaderTemplate" x:DataType="x:String">
+            <TextBlock FontSize="12"
+                       Text="{Binding}"/>
+        </DataTemplate>
         <DataTemplate x:Key="ContactEmailEntryDataTemplate" x:DataType="models:Phone">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -51,6 +56,13 @@
                            HorizontalAlignment="Left"
                            Text="{x:Bind m_ViewModel.FullName, FallbackValue='Unknown contact'}"/>
             </Grid>
+            <toolkit:HeaderedItemsControl
+                Header="Email(s)"
+                HeaderTemplate="{StaticResource ContactTypeModelEntryHeaderTemplate}"
+                ItemTemplate="{StaticResource ContactEmailEntryDataTemplate}"/>
+            <toolkit:HeaderedItemsControl
+                Header="Phone(s)"
+                HeaderTemplate="{StaticResource ContactTypeModelEntryHeaderTemplate}"/>
         </StackPanel>
     </ScrollViewer>
 
