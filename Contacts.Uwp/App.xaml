@@ -5,10 +5,23 @@
     xmlns:local="using:Contacts.Uwp"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls">
     <Application.Resources>
-        <muxc:XamlControlsResources>
-            <muxc:XamlControlsResources.MergedDictionaries>
-                <!-- Other app resources here -->
-            </muxc:XamlControlsResources.MergedDictionaries>
-        </muxc:XamlControlsResources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+            <ResourceDictionary x:Key="Light">
+                    <Color x:Key="BackgroundColor">#FFF</Color>
+                    <Color x:Key="BackgroundColor2">#30FFFFFF</Color>
+                    <Color x:Key="BorderColor">#10000000</Color>
+                </ResourceDictionary>
+            <ResourceDictionary x:Key="Dark">
+                    <Color x:Key="BackgroundColor">#FF2c2c2c</Color>
+                    <Color x:Key="BackgroundColor2">#05FFFFFF</Color>
+                    <Color x:Key="BorderColor">#40000000</Color>
+                </ResourceDictionary> 
+            </ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary.MergedDictionaries>
+                <muxc:XamlControlsResources xmlns="using:Microsoft.Ul.Xaml.Controls"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
+
 </Application>
