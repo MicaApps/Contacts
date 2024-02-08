@@ -14,8 +14,8 @@
     <Page.Background>
         <common:HostBackdropAcrylicBrush 
             FallbackColor="#ECECF2"
-            LuminosityColor="#ECECF2"
-            Opacity="0.7"/>
+            LuminosityColor="{ThemeResource BackgroundColor}"
+            Opacity="1"/>
     </Page.Background>
     <Page.Resources>
         <DataTemplate x:Key="AppListViewContactTemplate">
@@ -127,14 +127,14 @@
                 <AppBarButton x:Name="m_SettingsPageButton" Width="40" Label="Settings" Icon="Setting"/>
                 <AppBarButton x:Name="m_ListViewAddButton" Width="40" Label="Add Contact" Icon="Add"/>
             </CommandBar.PrimaryCommands>
-
+        </CommandBar>
         <Border Grid.Column="1"
                 Grid.RowSpan="4"
-                Background="#40000000"
+                Background="{ThemeResource BorderColor}"
                 Width="0.5"
                 HorizontalAlignment="Left"/>
         <Grid Grid.Column="1"
               Grid.RowSpan="4"
-              Background="#80FFFFFF"/>
+              Background="{ThemeResource BackgroundColor2}"/>
     </Grid>
 </Page>

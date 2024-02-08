@@ -4,12 +4,31 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Contacts.Uwp"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls">
-    <Application.Resources>
+    <!--<Application.Resources>
         <muxc:XamlControlsResources>
             <muxc:XamlControlsResources.MergedDictionaries>
                 <ResourceDictionary Source="ms-appx:///Styles/Themes/Light.xaml"/>
                 <ResourceDictionary Source="ms-appx:///Styles/Themes/Dark.xaml"/>
             </muxc:XamlControlsResources.MergedDictionaries>
         </muxc:XamlControlsResources>
+    </Application.Resources>-->
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light">
+                    <Color x:Key="BackgroundColor">#EBEBEB</Color>
+                    <Color x:Key="BackgroundColor2">#50FFFFFF</Color>
+                    <Color x:Key="BorderColor">#10000000</Color>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Dark">
+                    <Color x:Key="BackgroundColor">#FF2c2c2c</Color>
+                    <Color x:Key="BackgroundColor2">#05FFFFFF</Color>
+                    <Color x:Key="BorderColor">#40000000</Color>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+            <ResourceDictionary.MergedDictionaries>
+                <muxc:XamlControlsResources xmlns="using:Microsoft.Ul.Xaml.Controls"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
