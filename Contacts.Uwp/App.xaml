@@ -8,8 +8,8 @@
         <ResourceDictionary>
             <ResourceDictionary.ThemeDictionaries>
             <ResourceDictionary x:Key="Light">
-                    <Color x:Key="BackgroundColor">#FFF</Color>
-                    <Color x:Key="BackgroundColor2">#30FFFFFF</Color>
+                    <Color x:Key="BackgroundColor">#EBEBEB</Color>
+                    <Color x:Key="BackgroundColor2">#50FFFFFF</Color>
                     <Color x:Key="BorderColor">#10000000</Color>
                 </ResourceDictionary>
             <ResourceDictionary x:Key="Dark">

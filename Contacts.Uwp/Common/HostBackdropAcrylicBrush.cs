@@ -102,7 +102,7 @@ namespace Contacts.Uwp.Common
 
         private readonly UISettings UISettings = new UISettings();
 
-        private const float _acrylicTintOpacityMinThreshold = 0.85f;
+        private const float _acrylicTintOpacityMinThreshold = 0.83f;
 
         private readonly DispatcherQueue _dispatcherQueue;
 
